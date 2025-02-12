@@ -33,7 +33,6 @@ class Login : AppCompatActivity() {
                 readData(name, mobile)
             }
         }
-
     }
 
     fun readData(name: String, mobile: String) {

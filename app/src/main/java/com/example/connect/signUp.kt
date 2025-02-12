@@ -32,13 +32,11 @@ class signUp : AppCompatActivity() {
 
             val user = User(name, mobile, email)
             database = FirebaseDatabase.getInstance().getReference("Contact")
-            database.child(mobile).setValue(user)
-                .addOnSuccessListener {
+            database.child(mobile).setValue(user).addOnSuccessListener {
 
                     Toast.makeText(this, "User Registration successfull!", Toast.LENGTH_SHORT)
                         .show()
-                }
-                .addOnFailureListener {
+                }.addOnFailureListener {
                     Toast.makeText(this, "User Registration failed!", Toast.LENGTH_SHORT).show()
                 }
 

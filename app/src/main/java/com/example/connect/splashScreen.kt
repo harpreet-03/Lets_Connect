@@ -16,7 +16,6 @@ class splashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.splash_main)
-
         lifecycleScope.launch {
             delay(1000) // Show splash for 1 second
             startActivity(Intent(this@splashScreen, letsConnect::class.java))

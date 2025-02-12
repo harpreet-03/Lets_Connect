@@ -17,7 +17,6 @@ class letsConnect : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityLetsConnectBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.button.setOnClickListener {
         val intent = Intent(this, signUp::class.java)
             startActivity(intent)
