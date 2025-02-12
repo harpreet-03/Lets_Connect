@@ -22,7 +22,5 @@ class letsConnect : AppCompatActivity() {
         val intent = Intent(this, signUp::class.java)
             startActivity(intent)
         }
-
-
     }
 }
