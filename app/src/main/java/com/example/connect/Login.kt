@@ -49,8 +49,12 @@ class Login : AppCompatActivity() {
                     val storedName = snapshot.child("name").value.toString()
 
                     if (storedName.equals(name, ignoreCase = true)) {
-                        Toast.makeText(this, "User exists and name matches!", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+
+                        // Navigate to HomeActivity
+                        val intent = Intent(this, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish() // Prevents going back to Login screen
                     } else {
                         Toast.makeText(
                             this,
@@ -70,6 +74,7 @@ class Login : AppCompatActivity() {
                 ).show()
             }
     }
+
 
 
     fun onSignupClick(view: View) {
